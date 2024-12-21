@@ -8,6 +8,6 @@ class Program
 
 	static void Greet()
 	{
-		Console.WriteLine("Hello from feature1!");
+		Console.WriteLine("lol!");
 	}
 }
