@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<int> graph[100000];
+bool used[100000];      //вместо visited массив меток обычно называют used.
+
+void dfs(int v) {
+    used[v] = true;
+    cout << "DFS at vertex " << v + 1 << endl;
+
+    for (int u: graph[v]) {
+        if (!used[u]) {
+            dfs(u);
+        }
+    }
+}
+
+int main() {
+    //Ввод графа...
+
+    dfs(0);     //Начинаем обход с вершины 0.
+}
